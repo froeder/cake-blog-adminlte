@@ -16,6 +16,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\Core\Configure;
 
 /**
  * Application Controller
@@ -59,5 +60,8 @@ class AppController extends Controller
 
         // For CakePHP before 3.5
         $this->viewBuilder()->theme('AdminLTE');
+
+        $this->viewBuilder()->setClassName('AdminLTE.AdminLTE');
     }
+
 }
